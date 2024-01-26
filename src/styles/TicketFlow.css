@@ -1,0 +1,204 @@
+/* rightside */
+.area-name {
+  padding: 2px 5px;
+}
+
+.ticket-area {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+
+  @media (width > 800px) {
+    padding: 2rem;
+  }
+}
+
+.flow-area {
+  z-index: 1;
+  grid-column: 2/-1;
+  padding: 2rem;
+  display: grid;
+  row-gap: 2.5rem;
+  border-left: solid 1px var(--white);
+  place-content: center;
+
+  @media (width < 800px) {
+    border: none;
+    padding: 2rem;
+    padding-top: 2rem;
+    border-top: solid 1px var(--white);
+    display: block;
+  }
+}
+
+.counter-line :is(h3, p, button) {
+  font-weight: 400;
+  align-self: center;
+}
+
+.counter-line :is(button, p) {
+  font-size: 1.5rem;
+}
+
+.counter-line h3 {
+  font-size: 1rem;
+}
+
+.counter-line button {
+  color: var(--white);
+  background: none;
+  border: none;
+}
+.counter-line {
+  display: flex;
+  justify-content: space-between;
+}
+.counter {
+  display: flex;
+  gap: 1rem;
+  & p {
+    min-width: 26px;
+    display: grid;
+    place-content: center;
+  }
+}
+.choose-wrapper::after {
+  position: absolute;
+  content: "";
+  color: var(--accent-red);
+  font-weight: 600;
+  font-size: 14px;
+  right: -10px;
+  bottom: -20px;
+  display: none;
+}
+.choose-wrapper.tick.showError::after {
+  content: "Remove a tentspot first.";
+  display: block;
+}
+.choose-wrapper.ten.showError::after {
+  content: "Add more tickets.";
+  display: block;
+}
+.choose-wrapper {
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+
+  @media (width<800px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.choose-wrapper h2 {
+  font-size: clamp(1.5rem, 5vw, 6rem);
+  margin-bottom: 0.5rem;
+}
+
+.buttonError {
+  color: var(--accent-red);
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.wave2 {
+  position: absolute;
+  fill: var(--accent-orange);
+  scale: 1.5;
+  right: 0;
+  bottom: 2rem;
+  transform: rotate(10deg);
+  display: none;
+  @media (width>800px) {
+    display: block;
+  }
+}
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+  & h3 {
+    font-size: 12px;
+    font-weight: 400;
+    align-self: end;
+    & span {
+      font-size: 0.5rem;
+    }
+  }
+  @media (width>800px) {
+    h3 {
+      font-size: 1rem;
+    }
+    h3 span {
+      font-size: 0.75rem;
+    }
+  }
+}
+.green-option {
+  padding-top: 1rem;
+}
+h3:has(svg) {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.green-option h3 span {
+  align-self: end;
+}
+.crew-option {
+  border-bottom: 1px solid var(--stroke-clr);
+  padding-bottom: 1rem;
+}
+.heart-container {
+  display: flex;
+  align-items: center;
+}
+
+.heart-icon {
+  fill: var(--white);
+  width: 20px;
+}
+
+.vip {
+  color: var(--accent-red);
+  fill: var(--accent-red);
+}
+
+.green {
+  color: var(--accent-green);
+  fill: var(--accent-green);
+}
+.counter-line h3 span {
+  font-size: 1rem;
+}
+/* checkbox */
+.checkbox-label {
+  display: grid;
+  place-content: end;
+}
+
+.check-box {
+  accent-color: #dc5f0c;
+  width: 1rem;
+  height: 1rem;
+}
+@media only screen and (min-width: 800px) {
+  .sec {
+    /* min-height: 100vh; */
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 0;
+  }
+
+  .choose-wrapper h2 {
+    font-size: 40px;
+  }
+
+  .counter-line :is(h3, p, button) {
+    font-size: 24px;
+  }
+
+  .flow-area {
+    row-gap: 1.5rem;
+  }
+}

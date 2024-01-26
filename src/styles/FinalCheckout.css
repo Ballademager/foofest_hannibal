@@ -1,0 +1,37 @@
+.formcontainerCheckout {
+  padding: 10rem;
+  & h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.dateflex {
+  display: flex;
+  gap: 0.5rem;
+  & input:nth-child(1) {
+    width: 3rem;
+  }
+  & input:nth-child(4) {
+    width: 6rem;
+  }
+  & label:nth-child(3) {
+    order: 1;
+  }
+  & p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .formcontainerCheckout {
+    padding: 1rem;
+  }
+  .formcontainerCheckout input.submitBtn {
+    margin-top: 2rem;
+    grid-column: 1/-1;
+  }
+  .formcontainerCheckout .btngrid {
+    justify-content: stretch;
+  }
+}

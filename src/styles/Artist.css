@@ -1,0 +1,76 @@
+.item {
+  display: flex;
+  width: 100%;
+  border-bottom: solid 1px var(--white);
+  padding-right: 1rem;
+  padding-left: 1rem;
+  align-items: center;
+  @media (width< 900px) {
+    padding-block: 0.7rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+    :nth-child(1) {
+      grid-column: 2;
+    }
+    & .artist h3 {
+      grid-area: 1/1/2/2;
+    }
+    & .artist p {
+      margin-block: 0;
+    }
+    .myLikeBtnContainer,
+    .secbtn {
+      justify-self: end;
+    }
+  }
+}
+.item:first-child {
+  @media (width<800px) {
+    border-top: 1px solid var(--white);
+  }
+}
+.artist p {
+  font-weight: 200;
+  font-size: 0.83rem;
+  margin-block-start: 1.67rem;
+  margin-block-end: 1.67rem;
+}
+.artist-container {
+  display: contents;
+  @media (width> 900px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.artist {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @media (width< 900px) {
+    display: contents;
+  }
+}
+
+.artisth2 {
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+
+.Vanaheim {
+  color: var(--accent-blue);
+}
+.Jotunheim {
+  color: var(--accent-orange);
+}
+
+.Midgard {
+  color: var(--accent-red);
+}
+.myLikeBtnContainer {
+  width: 40px;
+  height: 40px;
+}

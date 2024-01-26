@@ -1,0 +1,109 @@
+header {
+  overflow: hidden;
+  position: relative;
+  & .wave {
+    position: absolute;
+    fill: var(--accent-orange);
+    transform-origin: bottom right;
+    scale: 0.5;
+    right: -20rem;
+    bottom: -1rem;
+    transform: rotate(-5deg);
+    display: block;
+
+    @media (max-width: 800px) {
+      scale: 0.7;
+    }
+  }
+}
+
+.headerh1 {
+  font-size: clamp(1rem, calc(19vw), 40rem);
+  margin-left: 1rem;
+  color: var(--text-color);
+
+  position: relative;
+  z-index: 1;
+}
+
+.festival-date {
+  font-size: 1rem;
+  padding-inline: 4rem;
+  font-weight: bold;
+  @media (width<800px) {
+    font-size: 1rem;
+  }
+}
+
+.cancelled-box {
+  display: flex;
+  align-items: center;
+}
+
+.cancelled-event {
+  font-size: 1rem;
+  color: var(--accent-red);
+  padding-inline: 4rem;
+  @media (width<800px) {
+    padding-inline: 2rem;
+  }
+}
+
+.teasers {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  max-width: 50ch;
+  color: var(--text-color);
+  padding-bottom: 1rem;
+
+  :last-child {
+    align-self: start;
+  }
+  @media (width<800px) {
+    padding: 0 0 1rem 1rem;
+  }
+}
+
+.flex {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  flex-wrap: wrap;
+  @media (width<800px) {
+    padding: 0;
+  }
+}
+
+.hero-img {
+  object-fit: cover;
+}
+.cls-ani {
+  fill: var(--accent-color);
+  stroke-dasharray: 800;
+  animation: dash 2.2s linear;
+  stroke: var(--accent-color);
+}
+.fillani {
+  animation: color 0.5s linear;
+}
+@keyframes dash {
+  from {
+    fill: transparent;
+    stroke-dashoffset: 800;
+  }
+  to {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes color {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--accent-color);
+  }
+}

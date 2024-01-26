@@ -1,0 +1,105 @@
+.ticketHolder {
+  width: 80dvw;
+  height: 30dvw;
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.first {
+  background-color: #0f0a0a;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100%;
+  border: 1px solid var(--white);
+
+  & .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h2 {
+      font-size: 2rem;
+      text-align: center;
+      color: #fafaf0;
+    }
+  }
+  & .wave {
+    height: 20dvw;
+    fill: #fafaf0;
+  }
+
+  & .info {
+    background-color: #fafaf0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0.5rem;
+
+    &:is(h4, h3) {
+      text-transform: uppercase;
+      font-size: 0.5rem;
+    }
+    @media (width<800px) {
+      & h3 {
+        font-size: 0.8rem;
+      }
+      & h4 {
+        font-size: 0.6rem;
+      }
+    }
+    & p {
+      font-weight: 300;
+      font-size: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .ticketHolder {
+    width: 800px;
+    height: 300px;
+  }
+
+  .hide-mobile {
+    display: block;
+  }
+
+  .card {
+    & .first {
+      padding-block: 1rem;
+
+      & h2 {
+        font-size: 5rem;
+      }
+    }
+    & .wave {
+      height: 180px;
+    }
+
+    & .info {
+      padding: 1rem;
+      padding-top: 2rem;
+
+      & h4 {
+        font-size: 1.25rem;
+      }
+
+      & p {
+        font-size: 1rem;
+      }
+
+      & svg {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.filter-button {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1rem;
+  opacity: 30%;
+
+  @media (width<800px) {
+    font-size: 0.8rem !important;
+  }
+}
+
+.filter-button.active {
+  opacity: 100%;
+}

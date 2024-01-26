@@ -1,0 +1,44 @@
+.submitBtn {
+  text-transform: uppercase;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--bg-color);
+  border: var(--bg-color) solid 1px;
+  transition: ease 0.2s;
+  @media (width > 800px) {
+    width: fit-content;
+  }
+}
+.submitBtn:hover {
+  background-color: var(--bg-color);
+  color: var(--white);
+  border: var(--white) solid 1px;
+}
+
+.flow-grid {
+  display: grid;
+}
+
+.btngrid {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.participanth3 {
+  margin-block: 2rem;
+}
+
+.ticket-box:not(:last-of-type) {
+  border-bottom: solid 1px var(--white);
+}
+
+.ticket-box-padding {
+  padding-top: 2rem;
+}

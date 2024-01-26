@@ -1,0 +1,68 @@
+.ticketinfo {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ticketamount {
+  display: flex;
+  gap: 3rem;
+  position: relative;
+}
+
+.ticketpay {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4rem;
+}
+
+.ticketformh2 {
+  font-size: clamp(1.5rem, 5vw, 6rem);
+  @media (width > 800px) {
+    font-size: 3rem;
+  }
+}
+
+.perstent1 {
+  display: flex;
+  justify-content: space-between;
+}
+.perstent2 {
+  display: flex;
+  justify-content: space-between;
+}
+.perstent3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalprice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.camparea h3 {
+  font-size: 1.5rem;
+  color: var(--accent-red);
+}
+
+#clear-basket-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.clear-basket {
+  display: block;
+  color: var(--stroke-clr-op);
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: fit-content;
+  height: auto;
+  &:hover {
+    color: var(--font-clr);
+  }
+}

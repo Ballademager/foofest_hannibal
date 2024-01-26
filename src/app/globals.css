@@ -1,0 +1,186 @@
+@import url("https://use.typekit.net/naq1gyi.css");
+
+/* custom properties */
+:root {
+  --bg-color: var(--background-clr, #0f0a0a);
+  --text-color: var(--font-clr, #f5f5f5);
+  --border-color: var(--stroke-clr, #f5f5f5);
+  --white: #fafaf0;
+  /*   --accent-green: #59ff3f; */
+  --accent-green: #25b50f;
+  --accent-blue: #5a3fff;
+  --accent-red: #ff3f3f;
+  --accent-orange: #ff6600;
+  --accent-teal: #2da9dc;
+  --accent-color: #ff6600;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f0a0a;
+  --font-clr: #fafaf0;
+  --stroke-clr: #fafaf0;
+  --stroke-clr-op: hsla(60, 50%, 96%, 0.3);
+  --black: #0f0a0a;
+}
+
+[data-theme="light"] {
+  --bg-color: #faf8f0;
+  --font-clr: #0f0a0a;
+  --stroke-clr: #0f0a0a;
+  --stroke-clr-op: hsla(0, 20%, 5%, 0.3);
+  --white: #0f0a0a;
+  --black: #0f0a0a;
+  --text-color: #0f0a0a;
+  --border-color: #0f0a0a;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--bg-color);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-family: "alfabet", sans-serif;
+  ::selection {
+    background-color: var(--accent-color);
+  }
+}
+
+/* Reset herunder */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a,
+button,
+input[type="checkbox"],
+input[radio="radio"] {
+  cursor: pointer;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  line-height: 1.5;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ------------ ekstra ----------- */
+p {
+  text-wrap: pretty;
+}
+
+/* input {
+  font: inherit;
+  font-size: max(16px, 1em);
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid hsl(var(--theme-color));
+} */
+
+/* input:is(:focus-visible, :hover) {
+  border-color: hsl(var(--accent-color));
+} */
+
+/* input:is([type="checkbox"], [type="radio"]) {
+  appearance: none;
+  // custom styling
+} */
+
+h1,
+h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.pbold {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}

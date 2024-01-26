@@ -1,0 +1,43 @@
+.recommended-container {
+  margin: 1rem;
+}
+
+.recommended {
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 1rem;
+}
+
+.recommended-heading {
+  margin-block: 2rem;
+}
+
+.recommended-artist-container {
+  position: relative;
+
+  &:only-child {
+    max-width: 500px;
+  }
+
+  & img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.recommended-artist-grid {
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: 200px auto;
+}
+
+.recommended-artist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem;
+}

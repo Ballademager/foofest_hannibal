@@ -1,0 +1,34 @@
+.recommended-artist-container {
+  height: 100%;
+  border: 1px solid var(--stroke-clr);
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid var(--stroke-clr);
+  }
+}
+
+.recommended-artist {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--text-color);
+  padding: 0.5rem;
+}
+
+.recommended-artist-container {
+  position: relative;
+
+  &:only-child {
+    max-width: 500px;
+  }
+
+  & img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
